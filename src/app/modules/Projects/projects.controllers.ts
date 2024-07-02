@@ -8,7 +8,7 @@ const createProject = catchAsync(async (req: Request, res: Response) => {
   const result = await ProjectsServices.createProject(req.body);
 
   sendResponse(res, {
-    statusCode: httpStatus.OK,
+    statusCode: httpStatus.CREATED,
     success: true,
     message: 'Project created successfully!',
     data: result,
