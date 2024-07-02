@@ -16,3 +16,7 @@ const skillSchema = new Schema<TSkill>({
     required: true,
   },
 });
+
+const Skill = model('Skill', skillSchema);
+
+export default Skill;
