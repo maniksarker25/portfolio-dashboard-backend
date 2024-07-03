@@ -11,9 +11,6 @@ const profileSchema = new Schema<TProfile>({
     default: userData.introduction,
   },
   profilePicture: { type: String, default: userData.profilePicture },
-  frontEndSkills: { type: String, default: userData.frontEndSkills },
-  backEndSkills: { type: String, default: userData.backEndSkills },
-  tools: { type: String, default: userData.tools },
   socialLinks: {
     linkedin: { type: String, default: userData.socialLinks.linkedin },
     github: { type: String, default: userData.socialLinks.github },

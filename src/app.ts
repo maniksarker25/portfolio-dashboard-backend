@@ -5,7 +5,7 @@ import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import notFound from './app/middlewares/notFound';
 import router from './app/routes';
 const app: Application = express();
-const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['http://localhost:5173'];
 app.use(
   cors({
     origin: allowedOrigins,
@@ -13,7 +13,7 @@ app.use(
   }),
 );
 // parser
-app.use(express.json());
+app.use(express.json({ limit: '30mb' }));
 app.use(cookieParser());
 
 // application routes

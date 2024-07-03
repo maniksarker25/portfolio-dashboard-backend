@@ -1,22 +1,20 @@
 import { z } from 'zod';
 
-const LoginValidation = z.object({
+const loginValidationSchema = z.object({
   body: z.object({
     email: z.string().email({ message: 'Invalid email!' }),
     password: z.string(),
   }),
 });
 
-const ChangePasswordValidation = z.object({
+const changePasswordValidationSchema = z.object({
   body: z.object({
     oldPassword: z.string(),
     newPassword: z.string(),
   }),
 });
 
-const AuthValidations = {
-  LoginValidation,
-  ChangePasswordValidation,
+export const authValidations = {
+  loginValidationSchema,
+  changePasswordValidationSchema,
 };
-
-export default AuthValidations;

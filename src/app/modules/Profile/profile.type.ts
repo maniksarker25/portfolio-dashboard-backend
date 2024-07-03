@@ -3,9 +3,6 @@ export type TProfile = {
   designation: string;
   introduction: string;
   profilePicture: string;
-  frontEndSkills: string;
-  backEndSkills: string;
-  tools: string;
   socialLinks: {
     linkedin: string;
     github: string;
