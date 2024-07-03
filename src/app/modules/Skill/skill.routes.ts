@@ -12,5 +12,6 @@ router.post(
   validateRequest(skillValidations.createSkillValidationSchema),
   skillControllers.createSkill,
 );
+router.get('/', AuthGuard(), skillControllers.getAllSkill);
 
 export const skillRoutes = router;

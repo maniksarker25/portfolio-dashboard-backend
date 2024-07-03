@@ -6,6 +6,12 @@ const createSkillInfoDB = async (payload: TSkill) => {
   return result;
 };
 
+const getAllSkillFromDB = async () => {
+  const result = await Skill.find();
+  return result;
+};
+
 export const skillServices = {
   createSkillInfoDB,
+  getAllSkillFromDB,
 };
