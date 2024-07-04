@@ -11,5 +11,6 @@ router.post(
   experienceControllers.createExperience,
 );
 router.get('/', experienceControllers.getAllExperience);
+router.delete('/:id', experienceControllers.deleteExperience);
 
 export const experienceRoutes = router;
