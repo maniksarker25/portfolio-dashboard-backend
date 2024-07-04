@@ -10,8 +10,12 @@ const getAllExperienceFromDB = async () => {
   const result = await Experience.find();
   return result;
 };
-
+const deleteExperienceFromDB = async (id: string) => {
+  const result = await Experience.findByIdAndDelete(id);
+  return result;
+};
 export const experienceServices = {
   createExperienceIntoDB,
   getAllExperienceFromDB,
+  deleteExperienceFromDB,
 };
