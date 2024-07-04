@@ -3,5 +3,5 @@ export type TExperience = {
   designation: string;
   startDate: Date;
   endDate: Date;
-  currentlyWorking: boolean;
+  //   currentlyWorking: boolean;
 };

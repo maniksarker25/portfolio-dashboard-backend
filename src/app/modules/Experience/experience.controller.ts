@@ -14,6 +14,18 @@ const createExperience = catchAsync(async (req, res) => {
   });
 });
 
+const getAllExperience = catchAsync(async (req, res) => {
+  const result = await experienceServices.getAllExperienceFromDB();
+
+  sendResponse(res, {
+    statusCode: httpStatus.CREATED,
+    success: true,
+    message: 'Experience retrieved successfully!',
+    data: result,
+  });
+});
+
 export const experienceControllers = {
   createExperience,
+  getAllExperience,
 };

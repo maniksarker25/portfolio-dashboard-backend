@@ -10,8 +10,8 @@ const createExperienceValidationSchema = z.object({
       required_error: 'Designation is required',
       invalid_type_error: 'Designation must be a string',
     }),
-    startDate: z.date(),
-    endDate: z.date().optional(),
+    startDate: z.string(),
+    endDate: z.string().optional(),
   }),
 });
 

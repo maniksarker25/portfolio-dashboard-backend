@@ -18,10 +18,10 @@ const experienceSchema = new Schema<TExperience>(
     endDate: {
       type: Date,
     },
-    currentlyWorking: {
-      type: Boolean,
-      default: false,
-    },
+    // currentlyWorking: {
+    //   type: Boolean,
+    //   default: false,
+    // },
   },
   {
     timestamps: true,
