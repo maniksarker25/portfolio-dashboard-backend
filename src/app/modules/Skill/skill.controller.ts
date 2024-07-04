@@ -23,8 +23,19 @@ const getAllSkill = catchAsync(async (req, res) => {
     data: result,
   });
 });
+const deleteSkill = catchAsync(async (req, res) => {
+  const result = await skillServices.deleteSkillFromDB(req?.params?.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Skill deleted successfully!',
+    data: result,
+  });
+});
 
 export const skillControllers = {
   createSkill,
   getAllSkill,
+  deleteSkill,
 };

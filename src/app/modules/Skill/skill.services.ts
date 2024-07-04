@@ -11,7 +11,13 @@ const getAllSkillFromDB = async () => {
   return result;
 };
 
+const deleteSkillFromDB = async (id: string) => {
+  const result = await Skill.findByIdAndDelete(id);
+  return result;
+};
+
 export const skillServices = {
   createSkillInfoDB,
   getAllSkillFromDB,
+  deleteSkillFromDB,
 };

@@ -5,26 +5,30 @@ const createProjectValidation = z.object({
     title: z.string({
       required_error: 'Title is required',
     }),
-    description: z.string({
-      required_error: 'Description is required',
+    shortDescription: z.string({
+      required_error: 'Short description is required',
     }),
-    frontEndTech: z.string({
-      required_error: 'Frontend technology is required',
+    technologyUsed: z.string({
+      required_error: 'Technology used is required',
     }),
-    backEndTech: z.string({
-      required_error: 'Backend technology is required',
+    frontEndRepo: z.string({
+      required_error: 'Frontend repo is required',
     }),
-    frontEndRepo: z.string().optional(),
-    backEndRepo: z.string().optional(),
-    liveLink: z.string({
-      required_error: 'Live link is required',
+    backEndRepo: z.string({
+      required_error: 'Backend repo is required',
     }),
-    image: z.string({
-      required_error: 'Image is required',
+    liveLink: z.string().optional(),
+    images: z.array(z.string()).default([]),
+    featureOne: z.string({
+      required_error: 'Feature one is required',
     }),
-    duration: z.string({
-      required_error: 'Duration is required',
+    featureTwo: z.string({
+      required_error: 'Feature two is required',
     }),
+    featureThree: z.string({
+      required_error: 'Feature three is required',
+    }),
+    note: z.string().optional(),
   }),
 });
 
