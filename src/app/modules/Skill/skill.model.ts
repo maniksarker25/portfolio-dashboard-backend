@@ -13,7 +13,6 @@ const skillSchema = new Schema<TSkill>(
     },
     category: {
       type: String,
-      enum: ['expert', 'comfortable', 'familiar', 'tools'],
       required: true,
     },
   },

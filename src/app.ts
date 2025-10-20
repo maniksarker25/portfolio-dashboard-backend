@@ -5,7 +5,10 @@ import globalErrorHandler from './app/middlewares/globalErrorHandler';
 import notFound from './app/middlewares/notFound';
 import router from './app/routes';
 const app: Application = express();
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = [
+  'http://localhost:5173',
+  'https://portfolio-dashboard-chi.vercel.app',
+];
 app.use(
   cors({
     origin: allowedOrigins,

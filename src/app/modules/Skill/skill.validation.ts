@@ -7,7 +7,7 @@ const createSkillValidationSchema = z.object({
       required_error: 'Title is required',
       invalid_type_error: 'Title must be a string',
     }),
-    category: z.enum(['expert', 'comfortable', 'familiar', 'tools']),
+    category: z.string({ required_error: 'Category is required' }),
   }),
 });
 
