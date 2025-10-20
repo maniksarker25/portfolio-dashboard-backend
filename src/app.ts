@@ -8,6 +8,7 @@ const app: Application = express();
 const allowedOrigins = [
   'http://localhost:5173',
   'https://portfolio-dashboard-chi.vercel.app',
+  'https://maniksarker.vercel.app',
 ];
 app.use(
   cors({
