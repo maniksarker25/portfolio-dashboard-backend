@@ -9,6 +9,8 @@ const allowedOrigins = [
   'http://localhost:5173',
   'https://portfolio-dashboard-chi.vercel.app',
   'https://maniksarker.vercel.app',
+  'https://www.devsmanik.com',
+  'https://devsmanik.com',
 ];
 app.use(
   cors({
