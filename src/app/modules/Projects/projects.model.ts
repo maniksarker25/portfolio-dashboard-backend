@@ -13,6 +13,7 @@ const projectSchema = new Schema<TProject>({
   featureTwo: { type: String, required: true },
   featureThree: { type: String, required: true },
   note: { type: String },
+  priority: { type: Number, default: 0 },
 });
 
 const Project = model<TProject>('Project', projectSchema);
