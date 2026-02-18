@@ -9,7 +9,7 @@ const createProject = async (project: TProject) => {
 };
 
 const getProjects = async () => {
-  const projects = await Project.find();
+  const projects = await Project.find().sort({ priority: 1 });
   return projects;
 };
 
