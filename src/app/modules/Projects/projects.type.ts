@@ -11,4 +11,5 @@ export type TProject = {
   featureTwo: string;
   featureThree: string;
   note?: string;
+  priority?: number;
 };
